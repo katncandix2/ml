@@ -8,7 +8,7 @@ from pprint import pprint
 
 
 def get_data():
-    data = pd.read_excel('../data.xlsx', engine='openpyxl')
+    data = pd.read_excel('./data.xlsx', engine='openpyxl')
     # pprint(data)
 
     # pprint(data.columns)
@@ -83,5 +83,5 @@ if __name__ == '__main__':
     # load_model 验证一下
     model1 = tf.keras.models.load_model('./dnn_model_file/')
     predictions = model1.predict(df_data.to_numpy())
-    pprint((predictions>=0.5).astype(int))
+    pprint((predictions >= 0.5).astype(int))
     pprint(df_label)
