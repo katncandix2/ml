@@ -7,7 +7,7 @@ import graphviz
 
 
 def get_data():
-    data = pd.read_excel('../data.xlsx', engine='openpyxl')
+    data = pd.read_excel('./data.xlsx', engine='openpyxl')
     # pprint(data)
 
     # pprint(data.columns)
@@ -67,10 +67,10 @@ if __name__ == '__main__':
         clf,
         out_file='tree.dot',
         feature_names=df_data.columns.to_numpy(),
-        class_names=['label'],
-        # filled=True,
-        # rounded=True,
-        # special_characters=True
+        class_names=df['label'],
+        filled=True,
+        rounded=True,
+        special_characters=True
     )
     #
     # graph = graphviz.Source(dot_data)

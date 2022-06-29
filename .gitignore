@@ -1,2 +1,4 @@
 .idea/*
 ./dnn_model_file/*
+*.dot
+.ipynb_checkpoints/*
