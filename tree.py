@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn import tree
 from pprint import pprint
+from os import system
 
 import graphviz
 
@@ -62,6 +63,8 @@ if __name__ == '__main__':
     res = clf.predict(train_data)
     pprint(res)
 
+    data1 = pd.read_excel('./data.xlsx', engine='openpyxl')
+    print(data1)
     # # 绘制一下决策树
     dot_data = tree.export_graphviz(
         clf,
